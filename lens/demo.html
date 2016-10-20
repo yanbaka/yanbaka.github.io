@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery.lens demo</title>
+    <link rel="stylesheet" type="text/css" href="lens/jquery.lens.min.css">
+    <script type="text/javascript" src="lib/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="lens/jquery.lens.min.js"></script>
+    <style type="text/css">
+        img {
+            width: 100%;
+        }
+        .demo {
+            border-bottom: 1px solid #000;
+            padding-bottom: 50px;
+        }
+        .demo_wrap {
+            width: 300px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function() {
+            $("#demo1_img").lens();
+            $("#demo2_img").lens({
+                lens_size: 100
+            });
+            $("#demo3_img").lens({
+                lens_size: 300
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <h1>DEMO</h1>
+        <div id="demo1" class="demo">
+            <h2>default（lens size 200px）</h2>
+            <div class="demo_wrap"><img id="demo1_img" src="images/img_01.jpg"></div>
+        </div>
+        <div id="demo2" class="demo">
+            <h2>set lens size（lens size 100px）</h2>
+            <div class="demo_wrap"><img id="demo2_img" src="images/img_01.jpg"></div>
+            <h2>set lens size（lens size 300px）</h2>
+            <div class="demo_wrap"><img id="demo3_img" src="images/img_01.jpg"></div>
+        </div>
+    </div>
+</body>
+</html>
